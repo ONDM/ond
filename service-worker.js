@@ -5,7 +5,7 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(cacheName).then((cache) => {
       return cache.addAll([
-        '/',
+        '/ond/',
         '/ond/manifest.json',
         '/ond/style.css',
         '/ond/script.js',
