@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function ()
   {
     button2.addEventListener("click", function ()
     {
-      transitionPage('NEZADÁNO');
+      transitionPage('https://d807b7ac-f925-40ec-b676-c16ee8e0322e-00-26qgunpy6xwxr.kirk.replit.dev/');
     });
   }
 
