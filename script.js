@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function ()
   {
     button2.addEventListener("click", function ()
     {
-      transitionPage('https://d807b7ac-f925-40ec-b676-c16ee8e0322e-00-26qgunpy6xwxr.kirk.replit.dev/');
+      transitionPage('https://ondm.github.io/cetba/');
     });
   }
 
