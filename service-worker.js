@@ -8,13 +8,13 @@ self.addEventListener('install', (event) =>
     {
       return cache.addAll([
         '/',
-        '/manifest.json',
-        'style.css',
-        'script.js',
-        'favicon.png',
-        'font/font1.woff2',
-        'font/font2.woff2',
-        'sw.js',
+        '/ond/manifest.json',
+        '/ond/style.css',
+        '/ond/script.js',
+        '/ond/favicon.png',
+        '/ond/font/font1.woff2',
+        '/ond/font/font2.woff2',
+        '/ond/sw.js',
       ]);
     })
   );
