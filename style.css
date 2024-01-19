@@ -1,0 +1,247 @@
+body
+{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.page-transition
+{
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  background-color: #000;
+}
+
+.page-hidden
+{
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-in-out;
+  background-color: #000;
+}
+
+@font-face
+{
+  font-family: 'font1';
+  src: url('font/font1.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face
+{
+  font-family: 'font2';
+  src: url('font/font2.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.background
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: radial-gradient(ellipse at bottom, #000000 0%, #1a1a1a 100%);
+  color: white;
+}
+
+@keyframes fadeIn
+{
+  0%
+  {
+    opacity: 0;
+    transform: translateY(-65px);
+  }
+  100%
+  {
+    opacity: 1;
+    transform: translateY(-40px);
+  }
+}
+
+@keyframes textOndAnimation
+{
+  0%
+  {
+    opacity: 0;
+    transform: translateY(-65px);
+  }
+  100%
+  {
+    opacity: 1;
+    transform: translateY(-40px);
+  }
+}
+
+.text-ond-animation
+{
+    animation: textOndAnimation 1.5s ease-out;
+}
+
+@keyframes buttonAnimation
+{
+    0%
+    {
+      opacity: 0;
+      transform: translateY(-150px);
+    }
+    100%
+    {
+      opacity: 1;
+      transform: translateY(-125px);
+    }
+}
+
+.button-animation
+{
+  animation: buttonAnimation 1.5s ease-out 1s forwards;
+}
+
+.text-ond
+{
+  font-family: 'font1', Arial, sans-serif;
+  transform: translateY(-40px);
+  font-size: 12em;
+  margin-bottom: 50px;
+   display: inline-block;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.text-ond .text-o, .text-ond .text-n
+{
+  margin-right: -52px;
+}
+
+.text-ond .text-o
+{
+  color: #363636;
+}
+
+.text-ond .text-n
+{
+  color: #9A9A9A;
+}
+
+.text-ond .text-d
+{
+  color: #DEDEDE;
+}
+
+.buttons-container
+{
+  display: flex;
+}
+
+@keyframes fadeInButtons
+{
+  0%
+  {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+  100%
+  {
+    opacity: 1;
+    transform: translateY(-125);
+  }
+}
+
+.button
+{
+  font-family: 'font2', Arial, sans-serif;
+  transform: translateY(-125px);
+  padding: 10px 15px;
+  margin: 8px;
+  font-size: 1em;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: 2px solid #707070;
+  cursor: pointer;
+  width: 220px;
+  height: 50px;
+  border-radius: 35px;
+  transition: background-color 0.8s;
+   opacity: 0;
+  animation: fadeInButtons 1.5s ease-out 1s forwards;
+}
+
+.button:hover
+{
+  border-color: #646668;
+  box-shadow: 0 0 13px rgba(144, 147, 150, 0.8);
+  transition: box-shadow 0.4s, border-color 0.4s;
+}
+
+.button:not(:hover)
+{
+  box-shadow: 0 0 0px rgba(144, 147, 150, 0.8); /* Původní stín */
+  border-color: #646668; /* Původní barva ohraničení */
+  transition: box-shadow 0.4s, border-color 0.4s;
+}
+
+.button:active
+{
+  box-shadow: 0 0 12px rgba(144, 147, 150, 0.4);
+}
+
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+{
+  .text-ond
+  {
+    font-size: 9em;
+  }
+
+  .button
+  {
+    transform: translateY(-100px);
+  }
+
+  .text-ond .text-o, .text-ond .text-n
+  {
+    margin-right: -45px;
+  }
+
+  .buttons-container
+  {
+    flex-direction: column;
+  }
+
+  @keyframes fadeInButtons
+  {
+    0%
+    {
+      opacity: 0;
+      transform: translateY(-145px);
+    }
+    100%
+    {
+      opacity: 1;
+      transform: translateY(-160);
+    }
+  }
+
+  .button
+  {
+    font-family: 'font2', Arial, sans-serif;
+    transform: translateY(-125px);
+    padding: 10px 15px;
+    margin: 8px;
+    font-size: 1em;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: 2px solid #707070;
+    cursor: pointer;
+    width: 220px;
+    height: 50px;
+    border-radius: 35px;
+    transition: background-color 0.8s;
+    opacity: 0;
+    animation: fadeInButtons 1.5s ease-out 1s forwards;
+  }
+}
