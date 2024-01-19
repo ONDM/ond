@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function ()
   {
     button1.addEventListener("click", function ()
       {
-        transitionPage('https://https://ondm.github.io/calc/');
+        transitionPage('https://ondm.github.io/calc/');
       });
   }
 
