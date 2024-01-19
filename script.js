@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function ()
   {
     button1.addEventListener("click", function ()
       {
-        transitionPage('https://ff854762-d783-45a7-97fd-63aa29c4fb2b-00-3922l5m4ry2mi.global.replit.dev/');
+        transitionPage('https://https://ondm.github.io/calc/');
       });
   }
 
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function ()
   {
     button2.addEventListener("click", function ()
     {
-      transitionPage('https://d807b7ac-f925-40ec-b676-c16ee8e0322e-00-26qgunpy6xwxr.kirk.replit.dev/');
+      transitionPage('NEZADÁNO');
     });
   }
 
