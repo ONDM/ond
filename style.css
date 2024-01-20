@@ -94,7 +94,7 @@ body
     }
 }
 
-.button-animation
+.button-animation, .buttons-animation
 {
   animation: buttonAnimation 1.5s ease-out 1s forwards;
 }
@@ -148,7 +148,7 @@ body
   }
 }
 
-.button
+.button, .button1
 {
   font-family: 'font2', Arial, sans-serif;
   transform: translateY(-125px);
@@ -167,21 +167,21 @@ body
   animation: fadeInButtons 1.5s ease-out 1s forwards;
 }
 
-.button:hover
+.button:hover, button1:hover
 {
   border-color: #646668;
   box-shadow: 0 0 13px rgba(144, 147, 150, 0.8);
   transition: box-shadow 0.4s, border-color 0.4s;
 }
 
-.button:not(:hover)
+.button:not(:hover), .buttons:not(:hover)
 {
   box-shadow: 0 0 0px rgba(144, 147, 150, 0.8); /* Původní stín */
   border-color: #646668; /* Původní barva ohraničení */
   transition: box-shadow 0.4s, border-color 0.4s;
 }
 
-.button:active
+.button:active, .buttons:active
 {
   box-shadow: 0 0 12px rgba(144, 147, 150, 0.4);
 }
@@ -197,7 +197,7 @@ and (-webkit-min-device-pixel-ratio: 2)
     font-size: 9em;
   }
 
-  .button
+  .button, .buttons
   {
     transform: translateY(-100px);
   }
@@ -226,7 +226,7 @@ and (-webkit-min-device-pixel-ratio: 2)
     }
   }
 
-  .button
+  .button, .buttons
   {
     font-family: 'font2', Arial, sans-serif;
     transform: translateY(-125px);
