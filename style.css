@@ -248,7 +248,8 @@ and (-webkit-min-device-pixel-ratio: 2)
 
 
 /* PADÁNÍ VLOČEK */
-.snowflakes {
+.snowflakes
+{
   position: absolute;
   top: 0;
   left: 0;
@@ -257,18 +258,22 @@ and (-webkit-min-device-pixel-ratio: 2)
   pointer-events: none;
 }
 
-.snowflake {
+.snowflake
+{
   position: absolute;
   color: #fff;
   font-size: 20px; /* Velikost vločky */
   animation: fall linear infinite;
 }
 
-@keyframes fall {
-  0% {
+@keyframes fall
+{
+  0%
+  {
     transform: translateY(-10vh);
   }
-  100% {
+  100%
+  {
     transform: translateY(110vh);
     opacity: 0;
   }
