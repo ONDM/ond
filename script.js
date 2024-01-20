@@ -2,12 +2,14 @@ document.addEventListener("DOMContentLoaded", function ()
 {
   const button1 = document.querySelector(".button1");
   const button2 = document.querySelector(".button2");
+  const button3 = document.querySelector(".button3");
+
   if (button1)
   {
     button1.addEventListener("click", function ()
-      {
-        transitionPage('https://ondm.github.io/calc/');
-      });
+    {
+      transitionPage('https://ondm.github.io/calc/');
+    });
   }
 
   if (button2)
@@ -15,6 +17,14 @@ document.addEventListener("DOMContentLoaded", function ()
     button2.addEventListener("click", function ()
     {
       transitionPage('https://ondm.github.io/cetba/');
+    });
+  }
+
+  if (button3)
+  {
+    button3.addEventListener("click", function ()
+    {
+      transitionPage('https://ondm.github.io/emat/');
     });
   }
 
