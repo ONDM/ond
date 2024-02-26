@@ -4,6 +4,13 @@ document.addEventListener("DOMContentLoaded", function ()
   const button2 = document.querySelector(".button2");
   const button3 = document.querySelector(".button3");
 
+  const gradientContainer = document.getElementById('gradient-container');
+  const storedGradient = localStorage.getItem('backgroundGradient');
+  if (storedGradient)
+  {
+    gradientContainer.style.backgroundImage = storedGradient;
+  }
+
   if (button1)
   {
     button1.addEventListener("click", function ()
@@ -55,16 +62,16 @@ document.addEventListener("DOMContentLoaded", function ()
       button.classList.add('button-animation');
     });
   }
+
+  localStorage.setItem('backgroundGradient', window.getComputedStyle(gradientContainer).backgroundImage);
 });
 
-
-// PADÁNÍ VLOČEK
 document.addEventListener("DOMContentLoaded", function ()
 {
   const snowflakesContainer = document.getElementById("snowflakes-container");
   const currentDate = new Date();
-  const startDate = new Date(currentDate.getFullYear(), 11, 10);    // datum se indexuje od 0 po 11, takže 0 = leden a 11 = prosinec
-  const endDate = new Date(currentDate.getFullYear(), 0, 1);    // datum se indexuje od 0 po 11, takže 0 = leden a 11 = prosinec
+  const startDate = new Date(currentDate.getFullYear(), 0, 20);    // datum se indexuje od 0 po 11, takže 0 = leden a 11 = prosinec
+  const endDate = new Date(currentDate.getFullYear(), 0, 21);    // datum se indexuje od 0 po 11, takže 0 = leden a 11 = prosinec
 
   if (currentDate >= startDate && currentDate < endDate)
   {
@@ -127,7 +134,6 @@ document.addEventListener("DOMContentLoaded", function ()
       {
         snowflakes[i].update();
       }
-
       requestAnimationFrame(moveSnowflakes);
     }
 
