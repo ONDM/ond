@@ -3,13 +3,48 @@ body
   margin: 0;
   padding: 0;
   overflow: hidden;
+  background: #141414;
+}
+
+.gradient
+{
+  --size: 300px;
+  --speed: 40s;
+  --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+  width: var(--size);
+  height: var(--size);
+  filter: blur(calc(var(--size) / 5));
+  background-image: linear-gradient(hsl(1, 82%, 57%, 85%), hsl(267, 60%, 37%));
+  animation: rotate var(--speed) var(--easing) alternate infinite;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  z-index: -1;
+}
+
+#gradient-container
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-150px, -125px);
+}
+
+@keyframes rotate
+{
+  0%
+  {
+    transform: rotate(0deg);
+  }
+  100%
+  {
+    transform: rotate(360deg);
+  }
 }
 
 .page-transition
 {
   opacity: 1;
   transition: opacity 1s ease-in-out;
-  background-color: #000;
+  background-color: #141414;
 }
 
 .page-hidden
@@ -17,13 +52,13 @@ body
   opacity: 0;
   pointer-events: none;
   transition: opacity 1s ease-in-out;
-  background-color: #000;
+  background-color: #141414;
 }
 
 @font-face
 {
   font-family: 'font1';
-  src: url('font/font1.woff2') format('woff2');
+  src: url('/ond/font/font1.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -31,7 +66,7 @@ body
 @font-face
 {
   font-family: 'font2';
-  src: url('font/font2.woff2') format('woff2');
+  src: url('/ond/font/font2.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -43,8 +78,6 @@ body
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: radial-gradient(ellipse at bottom, #000000 0%, #1a1a1a 100%);
-  color: white;
 }
 
 @keyframes fadeIn
@@ -77,7 +110,7 @@ body
 
 .text-ond-animation
 {
-    animation: textOndAnimation 1.5s ease-out;
+  animation: textOndAnimation 1.5s ease-out;
 }
 
 @keyframes buttonAnimation
@@ -105,7 +138,7 @@ body
   transform: translateY(-40px);
   font-size: 12em;
   margin-bottom: 50px;
-   display: inline-block;
+  display: inline-block;
   animation: fadeIn 1.5s ease-out;
 }
 
@@ -155,30 +188,28 @@ body
   padding: 10px 15px;
   margin: 8px;
   font-size: 1em;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgb(0, 0, 0, 0.2);
   color: white;
-  border: 2px solid #707070;
+  border: 2px solid #707070; /* Původní barva ohraničení */
   cursor: pointer;
   width: 220px;
   height: 50px;
   border-radius: 35px;
-  transition: background-color 0.8s;
-   opacity: 0;
+  transition: background-color 0.8s, border-color 0.4s, box-shadow 0.4s; /* Přidání přechodů pro efekt */
+  opacity: 0;
   animation: fadeInButtons 1.5s ease-out 1s forwards;
 }
 
-.button:hover, button1:hover
+.button:hover, .button1:hover
 {
-  border-color: #646668;
-  box-shadow: 0 0 13px rgba(144, 147, 150, 0.8);
-  transition: box-shadow 0.4s, border-color 0.4s;
+  border-color: #c9c9c9; /* Změna barvy ohraničení na hover */
+  box-shadow: 0 0 13px rgba(144, 147, 150, 0.8); /* Zvýšení stínu na hover */
 }
 
 .button:not(:hover), .buttons:not(:hover)
 {
   box-shadow: 0 0 0px rgba(144, 147, 150, 0.8); /* Původní stín */
-  border-color: #646668; /* Původní barva ohraničení */
-  transition: box-shadow 0.4s, border-color 0.4s;
+  border-color: #c9c9c9; /* Původní barva ohraničení */
 }
 
 .button:active, .buttons:active
