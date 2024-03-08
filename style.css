@@ -23,9 +23,8 @@ body
 #gradient-container
 {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-150px, -125px);
+  top: 100px;
+  left: 500px;
 }
 
 @keyframes rotate
