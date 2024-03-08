@@ -8,13 +8,13 @@ body
 
 .gradient
 {
-  --size: 300px;
+  --size: 550px;
   --speed: 40s;
   --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
   width: var(--size);
   height: var(--size);
   filter: blur(calc(var(--size) / 5));
-  background-image: linear-gradient(hsl(1, 82%, 57%, 85%), hsl(267, 60%, 37%));
+  background-image: linear-gradient(hsl(197, 100%, 32%), hsl(307, 72%, 71%));
   animation: rotate var(--speed) var(--easing) alternate infinite;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   z-index: -1;
