@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function ()
 {
   const textOND = document.querySelector(".text-ond");
   const imageOverlay = document.createElement("img");
-  imageOverlay.src = "logo.png";
+  imageOverlay.src = "/ond/ondlogo.png";
   imageOverlay.classList.add("image-overlay");
   textOND.appendChild(imageOverlay);
 });
