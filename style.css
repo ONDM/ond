@@ -9,7 +9,7 @@ body
 .gradient
 {
   --size: 300px;
-  --speed: 30s;
+  --speed: 25s;
   --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
   width: var(--size);
   height: var(--size);
@@ -18,13 +18,15 @@ body
   animation: rotate var(--speed) var(--easing) alternate infinite;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   z-index: -1;
+  position: absolute;
 }
 
 #gradient-container
 {
   position: absolute;
-  top: 100px;
-  left: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-150px, -125px);
 }
 
 @keyframes rotate
