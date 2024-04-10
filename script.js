@@ -68,6 +68,15 @@ document.addEventListener("DOMContentLoaded", function ()
 
 document.addEventListener("DOMContentLoaded", function ()
 {
+  const textOND = document.querySelector(".text-ond");
+  const imageOverlay = document.createElement("img");
+  imageOverlay.src = "logo.png";
+  imageOverlay.classList.add("image-overlay");
+  textOND.appendChild(imageOverlay);
+});
+
+document.addEventListener("DOMContentLoaded", function ()
+{
   const snowflakesContainer = document.getElementById("snowflakes-container");
   const currentDate = new Date();
   const startDate = new Date(currentDate.getFullYear(), 0, 20);    // datum se indexuje od 0 po 11, takže 0 = leden a 11 = prosinec
