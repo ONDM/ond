@@ -13,6 +13,7 @@ self.addEventListener('install', (event) => {
         '/ond/font/font1.woff2',
         '/ond/font/font2.woff2',
         '/ond/sw.js',
+        '/ond/ondlogo.png',
       ]);
     })
   );
