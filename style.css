@@ -8,8 +8,8 @@ body
 
 .gradient
 {
-  --size: 550px;
-  --speed: 40s;
+  --size: 300px;
+  --speed: 30s;
   --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
   width: var(--size);
   height: var(--size);
@@ -139,6 +139,17 @@ body
   margin-bottom: 50px;
   display: inline-block;
   animation: fadeIn 1.5s ease-out;
+  position: relative;
+}
+
+.text-ond img
+{
+  position: absolute;
+  top: -50px;
+  left: 167px;
+  width: 100px;
+  height: 100px;
+  opacity: 0.1;
 }
 
 .text-ond .text-o, .text-ond .text-n
