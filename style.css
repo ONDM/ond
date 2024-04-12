@@ -289,6 +289,21 @@ and (-webkit-min-device-pixel-ratio: 2)
   }
 }
 
+/* IPHONE 15 */
+@media only screen and (width: 393px)
+{
+  .text-ond img
+  {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100px;
+    height: 100px;
+    opacity: 0.1;
+  }
+}
+
 
 /* PADÁNÍ VLOČEK */
 .snowflakes
