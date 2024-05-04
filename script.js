@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function ()
   const button1 = document.querySelector(".button1");
   const button2 = document.querySelector(".button2");
   const button3 = document.querySelector(".button3");
+  const button4 = document.querySelector(".button4");
 
   const gradientContainer = document.getElementById('gradient-container');
   const storedGradient = localStorage.getItem('backgroundGradient');
@@ -32,6 +33,14 @@ document.addEventListener("DOMContentLoaded", function ()
     button3.addEventListener("click", function ()
     {
       transitionPage('https://ondm.github.io/emat/');
+    });
+  }
+
+    if (button4)
+  {
+    button4.addEventListener("click", function ()
+    {
+      transitionPage('https://ondm.github.io/prehled/');
     });
   }
 
