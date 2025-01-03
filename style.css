@@ -250,7 +250,7 @@ and (-webkit-min-device-pixel-ratio: 2)
     margin-right: -45px;
   }
 
-  .buttons-container
+  .buttons-container, .buttons-container2
   {
     flex-direction: column;
   }
