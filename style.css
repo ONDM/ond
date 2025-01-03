@@ -193,7 +193,7 @@ body
   }
 }
 
-.button, .button1
+.button
 {
   font-family: 'font2', Arial, sans-serif;
   transform: translateY(-125px);
