@@ -79,6 +79,7 @@ body
   align-items: center;
   justify-content: center;
   height: 100vh;
+  text-align: center;
 }
 
 @keyframes fadeIn
@@ -136,7 +137,7 @@ body
 .ondlogo
 {
  position: position;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   width: 100px;
   height: auto;
   opacity: 1;
@@ -179,6 +180,7 @@ body
   transition: background-color 0.8s, border-color 0.4s, box-shadow 0.4s; /* Přidání přechodů pro efekt */
   opacity: 0;
   animation: fadeInButtons 1.5s ease-out 1s forwards;
+  transform: none;
 }
 
 .button:hover, .button1:hover
