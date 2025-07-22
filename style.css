@@ -133,17 +133,6 @@ body
   animation: buttonAnimation 1.5s ease-out 1s forwards;
 }
 
-.text-ond
-{
-  font-family: 'font1', Arial, sans-serif;
-  transform: translateY(-40px);
-  font-size: 12em;
-  margin-bottom: 50px;
-  display: inline-block;
-  animation: fadeIn 1.5s ease-out;
-  position: relative;
-}
-
 .text-ond img
 {
   position: absolute;
@@ -152,26 +141,6 @@ body
   width: 100px;
   height: 100px;
   opacity: 0.1;
-}
-
-.text-ond .text-o, .text-ond .text-n
-{
-  margin-right: -52px;
-}
-
-.text-ond .text-o
-{
-  color: #737373;
-}
-
-.text-ond .text-n
-{
-  color: #a6a6a6;
-}
-
-.text-ond .text-d
-{
-  color: #d9d9d9;
 }
 
 .buttons-container, .buttons-container2
