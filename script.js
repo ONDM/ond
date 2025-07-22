@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function ()
   {
     button2.addEventListener("click", function ()
     {
-      transitionPage('https://ondm.github.io/cetba/');
+      transitionPage('https://ondm.github.io/prazdniny/');
     });
   }
 
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function ()
   {
     button3.addEventListener("click", function ()
     {
-      transitionPage('https://ondm.github.io/emat/');
+      transitionPage('https://ondm.github.io/cetba/');
     });
   }
 
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function ()
   {
     button4.addEventListener("click", function ()
     {
-      transitionPage('https://ondm.github.io/prehled/');
+      transitionPage('https://ondm.github.io/epoprg/');
     });
   }
 
