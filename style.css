@@ -69,8 +69,8 @@ body
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: auto;
   z-index: 1;
+  height: auto;
 }
 
 .ondlogo
