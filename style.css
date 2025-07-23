@@ -61,12 +61,16 @@ body
 
 .background
 {
-  position: relative;
-  height: 100vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: auto;
+  z-index: 1;
 }
 
 .ondlogo
@@ -105,17 +109,12 @@ body
 .row1 { animation-delay: 1s; }
 .row2 { animation-delay: 2.5s; }
 
-@keyframes fadeInButtons
-{
-  0%
-  {
+@keyframes fadeInButtons {
+  0% {
     opacity: 0;
-    transform: translateY(-25px);
   }
-  100%
-  {
+  100% {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
