@@ -118,8 +118,8 @@ body
   animation: fadeInButtons 1.5s ease forwards;
 }
 
-.row1 { animation-delay: 1s; }
-.row2 { animation-delay: 2.5s; }
+.row1 { animation-delay: 0.5s; }
+.row2 { animation-delay: 1s; }
 
 @keyframes fadeInButtons {
   0% {
