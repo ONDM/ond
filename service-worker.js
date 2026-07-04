@@ -6,7 +6,6 @@ self.addEventListener('install', (event) => {
     caches.open(cacheName).then((cache) => {
       return cache.addAll([
         '/ond/',
-        '/ond/manifest_old.json',
         '/ond/manifest_new.json',
         '/ond/style.css',
         '/ond/script.js',
