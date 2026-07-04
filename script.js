@@ -76,25 +76,9 @@ document.addEventListener("DOMContentLoaded", function ()
   }
 
   if (gradientContainer)
-{
+  {
     localStorage.setItem('backgroundGradient', window.getComputedStyle(gradientContainer).backgroundImage);
   }
-  
-  if ('serviceWorker' in navigator)
-  {
-    window.addEventListener('load', function()
-    {
-      navigator.serviceWorker.register('/ond/sw.js')
-      .then(function(registration)
-      {
-        console.log('SW: Úspěšně zaregistrován s rozsahem: ', registration.scope);
-      })
-      .catch(function(error)
-      {
-        console.log('SW: Registrace selhala: ', error);
-      });
-  });
-}
 });
 
 // Vločky
@@ -109,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function ()
 
   if (currentDate >= startDate && currentDate < endDate)
   {
-    const numberOfSnowflakes = 100; // Optimalizovaný počet pro menu
+    const numberOfSnowflakes = 100;
     const snowflakes = [];
 
     function random(min, max) { return Math.random() * (max - min) + min; }
