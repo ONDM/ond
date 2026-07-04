@@ -83,7 +83,6 @@ body
   opacity: 0.05;
   pointer-events: none;
   z-index: 0;
-  animation: fadeInButtons 1s ease forwards;
 }
 
 .container
@@ -102,8 +101,8 @@ body
 .button-grid-container
 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
-  gap: 25px; 
+  grid-template-columns: repeat(2, 220px); 
+  gap: 15px 30px;
   max-width: 480px; 
   width: 100%;
   justify-content: center;
@@ -185,13 +184,13 @@ body
   opacity: 0.7;
 }
 
-/* 🔥 MOBILNÍ RESPONSIVITA: Postupné načítání od 1 do 4 pod sebou */
-@media (max-width: 480px)
+/* MOBILNÍ RESPONSIVITA (DO 600px) */
+@media (max-width: 600px)
 {
   .button-grid-container
   {
     grid-template-columns: 1fr;
-    gap: 20px; 
+    gap: 20px;
     max-width: 260px;
   }
 
@@ -208,8 +207,9 @@ body
     width: 280px;
   }
 
-  .button1 { animation-delay: 0.4s; }
-  .button2 { animation-delay: 0.8s; }
-  .button3 { animation-delay: 1.2s; }
-  .button4 { animation-delay: 1.6s; }
+  /* Časování pro mobil: Postupně jedno za druhým shora dolů (1, 2, 3, 4) */
+  .button1 { animation-delay: 0.4s; } 
+  .button2 { animation-delay: 0.8s; } 
+  .button3 { animation-delay: 1.2s; } 
+  .button4 { animation-delay: 1.6s; } 
 }
