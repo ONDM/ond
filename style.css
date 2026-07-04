@@ -83,6 +83,7 @@ body
   opacity: 0.05;
   pointer-events: none;
   z-index: 0;
+  animation: fadeInButtons 1s ease forwards;
 }
 
 .container
@@ -98,34 +99,18 @@ body
   width: 100%;
 }
 
-/* 🔥 UPRAVENÝ KONTEJNER: Používá inteligentní automatické zalamování a správné mezery */
 .button-grid-container
 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
-  gap: 25px; /* Sjednocená bezpečná mezera mezi všemi směry */
-  max-width: 480px; /* Šířka akorát pro dvě tlačítka vedle sebe s mezerou */
+  gap: 25px; 
+  max-width: 480px; 
   width: 100%;
   justify-content: center;
   justify-items: center;
   z-index: 1;
-  opacity: 0;
-  animation: fadeInButtons 1.5s ease forwards;
-  animation-delay: 0.5s;
   padding: 0 20px;
   box-sizing: border-box;
-}
-
-@keyframes fadeInButtons
-{
-  0%
-  {
-    opacity: 0;
-  }
-  100%
-  {
-    opacity: 1;
-  }
 }
 
 .button
@@ -142,6 +127,26 @@ body
   cursor: pointer;
   transition: background-color 0.3s, box-shadow 0.3s;
   box-sizing: border-box;
+  
+  opacity: 0;
+  animation: fadeInButtons 1.2s ease forwards;
+}
+
+.button1 { animation-delay: 0.5s; }
+.button2 { animation-delay: 0.5s; }
+.button3 { animation-delay: 1.1s; }
+.button4 { animation-delay: 1.1s; }
+
+@keyframes fadeInButtons
+{
+  0%
+  {
+    opacity: 0;
+  }
+  100%
+  {
+    opacity: 1;
+  }
 }
 
 .button:hover
@@ -180,13 +185,13 @@ body
   opacity: 0.7;
 }
 
-/* 🔥 MOBILNÍ RESPONSIVITA: Přísně jeden sloupec a čisté rozestupy 20px mezi každým tlačítkem */
+/* 🔥 MOBILNÍ RESPONSIVITA: Postupné načítání od 1 do 4 pod sebou */
 @media (max-width: 480px)
 {
   .button-grid-container
   {
     grid-template-columns: 1fr;
-    gap: 20px; /* Mezera, která spolehlivě oddělí tlačítka od sebe vertikálně */
+    gap: 20px; 
     max-width: 260px;
   }
 
@@ -202,4 +207,9 @@ body
   {
     width: 280px;
   }
+
+  .button1 { animation-delay: 0.4s; }
+  .button2 { animation-delay: 0.8s; }
+  .button3 { animation-delay: 1.2s; }
+  .button4 { animation-delay: 1.6s; }
 }
