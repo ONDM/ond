@@ -75,9 +75,26 @@ document.addEventListener("DOMContentLoaded", function ()
     });
   }
 
-  if (gradientContainer) {
+  if (gradientContainer)
+{
     localStorage.setItem('backgroundGradient', window.getComputedStyle(gradientContainer).backgroundImage);
   }
+  
+  if ('serviceWorker' in navigator)
+  {
+    window.addEventListener('load', function()
+    {
+      navigator.serviceWorker.register('/ond/sw.js')
+      .then(function(registration)
+      {
+        console.log('SW: Úspěšně zaregistrován s rozsahem: ', registration.scope);
+      })
+      .catch(function(error)
+      {
+        console.log('SW: Registrace selhala: ', error);
+      });
+  });
+}
 });
 
 // Vločky
