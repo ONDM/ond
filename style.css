@@ -192,14 +192,15 @@ body
 {
   .button-rows
   {
+    display: flex;
+    flex-direction: column;
     gap: 15px;
+    max-width: 240px;
   }
 
   .button-row
   {
-    grid-template-columns: 1fr !important;
-    gap: 15px;
-    max-width: 240px;
+    display: contents !important; 
   }
 
   .button
@@ -208,6 +209,9 @@ body
     height: 50px;
     font-size: 1em;
     padding: 12px 20px;
+    
+    opacity: 1 !important; 
+    animation: none !important;
   }
   
   .ondlogo
